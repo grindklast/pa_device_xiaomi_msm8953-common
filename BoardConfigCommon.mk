@@ -51,7 +51,7 @@ TARGET_KERNEL_VERSION := 4.9
 # ANT
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
-ifeq ($(TARGET_DEVICE), ysl)
+ifeq ($(TARGET_DEVICE), vince ysl)
 else
 # APEX image
 DEXPREOPT_GENERATE_APEX_IMAGE := true

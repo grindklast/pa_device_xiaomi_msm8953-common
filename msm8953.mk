@@ -18,7 +18,7 @@ $(call inherit-product, vendor/xiaomi/msm8953-common/msm8953-common-vendor.mk)
 
 include vendor/pa/config/common_full_phone.mk
 
-ifeq ($(TARGET_DEVICE), ysl)
+ifeq ($(TARGET_DEVICE), vince ysl)
 else
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
@@ -46,6 +46,9 @@ endif
 ifeq ($(TARGET_DEVICE), ysl)
 TARGET_SCREEN_HEIGHT := 1440
 TARGET_SCREEN_WIDTH := 720
+else ifeq ($(TARGET_DEVICE), vince)
+TARGET_SCREEN_HEIGHT := 2160
+TARGET_SCREEN_WIDTH := 1080
 else
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_SCREEN_WIDTH := 1080
